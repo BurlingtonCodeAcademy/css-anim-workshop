@@ -1,3 +1,8 @@
+body {
+  margin: 1vw;
+
+}
+
 div:not(#h1-wrap) {
   width: 15vw;
   height: 15vw;
@@ -9,27 +14,31 @@ main {
   justify-content: space-around;
   width: 80vw;
   height: auto;
+  background-color: transparent;
+  
 }
 
 h1 {
   color: white;
-  font-family: "Montserrat", sans-serif;
-  font-size: 2vw;
+  font-family: 'Bebas Neue', sans serif;
+  font-size: 5vw;
+  text-shadow: 2vh 2vw black;
 }
 
 
 #h1-wrap {
   text-align: center;
-  width: 30vw;
+  width: 35vw;
   margin: auto;
   background-color: #06d6a0;
-  padding: 3vh 2vw 2vh 2vw;
+  box-shadow: .5vw 1vh;
+  padding: 3vh 5vw 2vh 5vw;
   transition: all 0.5s ease;
   transition-property: width, background-color;
 }
 
 #h1-wrap:hover {
-  width: 35vw;
+  width: 40vw;
   background-color: #118ab2;
   transition: all 0.5s ease;
   transition-property: width, background-color;
@@ -84,6 +93,7 @@ h1 {
 
 #fade-div {
   background-color: #ef476f;
+  
 
   /*name matches the one on @keyframes*/
   animation-name: fade;
@@ -101,6 +111,7 @@ h1 {
 
 #fade-and-rotate-div {
   background-color: #ffd166;
+  
 
   /*name matches the one on @keyframes*/
   animation-name: fade-and-rotate;
@@ -122,6 +133,9 @@ h1 {
 }
 
 @media screen and (max-width: 500px){
-    h1 { font-size: 5vw; }
+    h1 { font-size: 6vw; }
+    #h1-wrap:hover {
+      display:  none;
+    }
 
 }
