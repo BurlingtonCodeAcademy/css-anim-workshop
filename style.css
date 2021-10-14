@@ -1,0 +1,127 @@
+div:not(#h1-wrap) {
+  width: 15vw;
+  height: 15vw;
+}
+
+main {
+  padding: 8vw;
+  display: flex;
+  justify-content: space-around;
+  width: 80vw;
+  height: auto;
+}
+
+h1 {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2vw;
+}
+
+
+#h1-wrap {
+  text-align: center;
+  width: 30vw;
+  margin: auto;
+  background-color: #06d6a0;
+  padding: 3vh 2vw 2vh 2vw;
+  transition: all 0.5s ease;
+  transition-property: width, background-color;
+}
+
+#h1-wrap:hover {
+  width: 35vw;
+  background-color: #118ab2;
+  transition: all 0.5s ease;
+  transition-property: width, background-color;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-and-rotate {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes square-to-circle-rotate {
+  0% {
+    border-radius: 0 0 0 0;
+    background: #ef476f;
+    transform: rotate(0deg);
+  }
+  25% {
+    border-radius: 50% 0 0 0;
+    background: #ffd166;
+    transform: rotate(45deg);
+  }
+  50% {
+    border-radius: 50% 50% 0 0;
+    background: #ef476f;
+    transform: rotate(90deg);
+  }
+  75% {
+    border-radius: 50% 50% 50% 0;
+    background: #ffd166;
+    transform: rotate(135deg);
+  }
+  100% {
+    border-radius: 50%;
+    background: #ef476f;
+    transform: rotate(180deg);
+  }
+}
+
+#fade-div {
+  background-color: #ef476f;
+
+  /*name matches the one on @keyframes*/
+  animation-name: fade;
+  /*duration of animation from start to finish*/
+  animation-duration: 4s;
+  /*delays the start of the animation*/
+  animation-delay: 1s;
+  /*how many times will the animation run*/
+  animation-iteration-count: infinite;
+  /*sets the speed of the animation*/
+  animation-timing-function: linear;
+  /*control over the direction of the animation loop*/
+  animation-direction: alternate;
+}
+
+#fade-and-rotate-div {
+  background-color: #ffd166;
+
+  /*name matches the one on @keyframes*/
+  animation-name: fade-and-rotate;
+  /*duration of animation from start to finish*/
+  animation-duration: 4s;
+  /*delays the start of the animation*/
+  animation-delay: 1s;
+  /*how many times will the animation run*/
+  animation-iteration-count: infinite;
+  /*sets the speed of the animation*/
+  animation-timing-function: ease-in-out;
+  /*control over the direction of the animation loop*/
+  animation-direction: alternate-reverse;
+}
+
+#square-to-circle-rotate-div {
+  animation: square-to-circle-rotate 2s 1s infinite
+    cubic-bezier(0.85, 0, 0.15, 1) alternate;
+}
+
+@media screen and (max-width: 500px){
+    h1 { font-size: 5vw; }
+
+}
