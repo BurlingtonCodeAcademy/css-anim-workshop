@@ -1,5 +1,7 @@
 # CSS Animations Workshop
 
+## Run-time: ~2 hours
+
 ## Purpose
 
 This workshop is designed to introduce the following topics to students with NO CSS experience:
